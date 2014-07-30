@@ -49,7 +49,7 @@ public class ChecksheetDataGenerator {
         return map;
     }
 
-    public static List<Map<String, String>> GetChecksheet( String code ) {
+    public static List<Map<String, String>> GetChecksheet() {
         List<Map<String, String>> retVal = new ArrayList<Map<String, String>>();
 
         retVal.add(CreateReading("Clearance - Outboard Bearing", "87-1", "Pump Shaft", "87", "Main Pump", 1, 10, "12.3", "12.2", "mm", "12/12/14", "Hella Echo Park church-key craft beer, irony twee Carles cornhole organic sriracha Bushwick literally readymade. PBR&B chambray pour-over, single-origin coffee selvage whatever biodiesel stumptown twee bespoke.", "Joe Worker"));
@@ -64,6 +64,12 @@ public class ChecksheetDataGenerator {
         retVal.add(CreateReading("Pump Amperage", "88-2", "Pump Electrical Panel", "88", "Secondary Pump", 10, 10, "", "3.3", "a", "", "", ""));
 
         return retVal;
+    }
+
+    public static Map<String, String> GetIndicatorReading(int sequence){
+        List<Map<String, String>> checksheet = GetChecksheet();
+        if (sequence < 1 || sequence >= checksheet.size()) return null;
+        return checksheet.get(sequence-1);
     }
 
     private static Map<String, String> CreateReading(String title, String asset_number, String asset_name, String parent_asset_number, String parent_asset_name,

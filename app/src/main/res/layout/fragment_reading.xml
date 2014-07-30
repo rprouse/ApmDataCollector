@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="6dp"
+    tools:context="com.bentley.apmdatacollector.ReadingActivity.ReadingFragment">
+
+    <TextView
+        android:id="@+id/reading_title"
+        tools:text="Clearance - Outboard Bearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingBottom="6dp" />
+
+    <!-- Sequence -->
+    <TextView
+        android:id="@+id/reading_sequence"
+        tools:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toLeftOf="@+id/reading_separator"
+        android:layout_alignBottom="@+id/reading_title"
+        android:paddingBottom="6dp" />
+
+    <TextView
+        android:text="/"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toLeftOf="@+id/reading_total_count"
+        android:id="@+id/reading_separator"
+        android:layout_alignBottom="@+id/reading_title"
+        android:paddingBottom="6dp" />
+
+    <TextView
+        android:id="@+id/reading_total_count"
+        tools:text="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/reading_title"
+        android:paddingBottom="6dp" />
+
+    <!-- Asset -->
+    <TextView
+        android:id="@+id/reading_asset_number"
+        tools:text="87-1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/reading_title" />
+
+    <TextView
+        android:text=" / "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/reading_asset_separator"
+        android:layout_alignTop="@+id/reading_asset_number"
+        android:layout_toRightOf="@+id/reading_asset_number" />
+
+    <TextView
+        android:id="@+id/reading_asset_name"
+        tools:text="Pump Shaft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toRightOf="@+id/reading_asset_separator"
+        android:layout_alignTop="@+id/reading_asset_number" />
+
+    <!-- Parent Asset -->
+    <TextView
+        android:id="@+id/reading_parent_asset_number"
+        tools:text="87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/reading_asset_number" />
+
+    <TextView
+        android:text=" / "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/reading_parent_asset_separator"
+        android:layout_alignTop="@+id/reading_parent_asset_number"
+        android:layout_toRightOf="@+id/reading_parent_asset_number" />
+
+    <TextView
+        android:id="@+id/reading_parent_asset_name"
+        tools:text="Main Pump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toRightOf="@+id/reading_parent_asset_separator"
+        android:layout_alignTop="@+id/reading_parent_asset_number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/reading_value_label"
+        android:id="@+id/reading_value_label"
+        android:layout_below="@+id/reading_parent_asset_number"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text="mm"
+        android:id="@+id/reading_uom"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/reading_value"
+        android:paddingLeft="6dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reading_value"
+        android:layout_toLeftOf="@+id/reading_uom"
+        android:layout_below="@+id/reading_value_label"
+        android:numeric="decimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/reading_notes_label"
+        android:id="@+id/reading_notes_label"
+        android:layout_below="@+id/reading_value"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="12dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reading_notes"
+        android:layout_below="@+id/reading_notes_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/reading_instructions_label"
+        android:id="@+id/reading_instructions_label"
+        android:layout_below="@+id/reading_notes"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/reading_instructions"
+        android:layout_below="@+id/reading_instructions_label"
+        tools:text="Hella Echo Park church-key craft beer, irony twee Carles cornhole organic sriracha Bushwick literally readymade. PBRB chambray pour-over, single-origin coffee selvage whatever biodiesel stumptown twee bespoke."
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/reading_reason_label"
+        android:id="@+id/reading_reason_label"
+        android:layout_below="@+id/reading_instructions"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reading_reason"
+        android:layout_below="@+id/reading_reason_label"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

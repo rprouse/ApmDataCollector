@@ -1,8 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.bentley.apmdatacollector.ChecksheetActivity" >
-    <item android:id="@+id/action_add_note"
-        android:title="@string/action_add_note"
+    tools:context="com.bentley.apmdatacollector.ReadingActivity" >
+    <item android:id="@+id/action_mark_unavailable"
+        android:title="@string/action_mark_unavailable"
         android:orderInCategory="100"
         android:showAsAction="never" />
     <item android:id="@+id/action_settings"

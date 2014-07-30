@@ -35,7 +35,7 @@ public class ChecksheetFragment extends Fragment {
 
         SimpleAdapter adapter = new SimpleAdapter(
                 getActivity(),
-                ChecksheetDataGenerator.GetChecksheet(mCode),
+                ChecksheetDataGenerator.GetChecksheet(),
                 R.layout.list_item_checksheet,
                 new String[] {
                         ChecksheetDataGenerator.READING_ASSET_NUMBER,
@@ -64,7 +64,7 @@ public class ChecksheetFragment extends Fragment {
 
                 if (map != null) {
                     String sequence = map.get(ChecksheetDataGenerator.READING_SEQUENCE);
-                    Intent intent = new Intent(getActivity(), ChecksheetActivity.class)
+                    Intent intent = new Intent(getActivity(), ReadingActivity.class)
                             .putExtra(Intent.EXTRA_TEXT, sequence);
                     getActivity().startActivity(intent);
                 }
