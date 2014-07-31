@@ -32,9 +32,9 @@ public class ChecksheetDataGenerator {
         retVal.add(CreateChecksheet("Pump Inspections", "WO:000177-WOT:1", "0%"));
         retVal.add(CreateChecksheet("Oil level checks - trucks", "WO:000231-WOT:1", "0%"));
         retVal.add(CreateChecksheet("Oil level checks - tractors", "WO:000231-WOT:2", "0%"));
-        retVal.add(CreateChecksheet("Electrical systems", "WO:000217-WOT:1", "0%"));
+        retVal.add(CreateChecksheet("Electrical systems", "ST:000312", "0%"));
         retVal.add(CreateChecksheet("Radiation checks", "WO:000298-WOT:1", "0%"));
-        retVal.add(CreateChecksheet("Back plant route", "WO:000334-WOT:1", "0%"));
+        retVal.add(CreateChecksheet("Back plant route", "ST:000334", "0%"));
         retVal.add(CreateChecksheet("Yearly inspection", "WO:000143-WOT:1", "0%"));
         retVal.add(CreateChecksheet("Drive temperature", "WO:000435-WOT:1", "0%"));
 

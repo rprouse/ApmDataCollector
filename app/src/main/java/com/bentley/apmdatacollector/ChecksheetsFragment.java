@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -32,14 +33,41 @@ public class ChecksheetsFragment extends Fragment {
                 new String[] {
                         ChecksheetDataGenerator.CHECKSHEET_TITLE,
                         ChecksheetDataGenerator.CHECKSHEET_CODE,
-                        ChecksheetDataGenerator.CHECKSHEET_PERCENT
+                        ChecksheetDataGenerator.CHECKSHEET_PERCENT,
+                        ChecksheetDataGenerator.CHECKSHEET_CODE,
+                        ChecksheetDataGenerator.CHECKSHEET_CODE,
                 },
                 new int[] {
                         R.id.list_item_checksheets_title,
                         R.id.list_item_checksheets_code,
-                        R.id.list_item_checksheets_percent
+                        R.id.list_item_checksheets_percent,
+                        R.id.list_item_checksheets_image,
+                        R.id.list_item_checksheets_icon
                 }
         );
+
+        adapter.setViewBinder(new SimpleAdapter.ViewBinder() {
+            @Override
+            public boolean setViewValue(View view, Object data, String textRepresentation) {
+                if (view.getId() == R.id.list_item_checksheets_icon) {
+                    if(textRepresentation.startsWith("ST")) {
+                        ((ImageView)view).setImageResource(R.drawable.icon_standardtask);
+                    } else {
+                        ((ImageView) view).setImageResource(R.drawable.icon_worktask);
+                    }
+                    return true;
+                } else if (view.getId() == R.id.list_item_checksheets_image) {
+                    if(textRepresentation.startsWith("ST")) {
+                        ((ImageView)view).setImageResource(R.drawable.standardtask);
+                    } else {
+                        ((ImageView) view).setImageResource(R.drawable.worktask);
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
+
         ListView listView = (ListView) rootView.findViewById(R.id.listview_checksheets);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
