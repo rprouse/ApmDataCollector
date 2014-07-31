@@ -66,12 +66,6 @@ public class ChecksheetDataGenerator {
         return retVal;
     }
 
-    public static Map<String, String> GetIndicatorReading(int sequence){
-        List<Map<String, String>> checksheet = GetChecksheet();
-        if (sequence < 1 || sequence >= checksheet.size()) return null;
-        return checksheet.get(sequence-1);
-    }
-
     private static Map<String, String> CreateReading(String title, String asset_number, String asset_name, String parent_asset_number, String parent_asset_name,
                                                      int sequence, int total, String value, String prev_value, String uom, String date, String notes, String employee) {
         if (date.isEmpty()) {
