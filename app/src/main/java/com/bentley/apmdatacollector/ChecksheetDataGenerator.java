@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 public class ChecksheetDataGenerator {
+    public static final String PENDING = "Pending";
+
     public static final String CHECKSHEET_TITLE = "checksheet_title";
     public static final String CHECKSHEET_CODE = "checksheet_code";
     public static final String CHECKSHEET_PERCENT = "checksheet_percent";
@@ -69,7 +71,7 @@ public class ChecksheetDataGenerator {
     private static Map<String, String> CreateReading(String title, String asset_number, String asset_name, String parent_asset_number, String parent_asset_name,
                                                      int sequence, int total, String value, String prev_value, String uom, String date, String notes, String employee) {
         if (date.isEmpty()) {
-            date = "Pending";
+            date = PENDING;
         }
         if (!prev_value.isEmpty()) {
             prev_value += " " + uom;
