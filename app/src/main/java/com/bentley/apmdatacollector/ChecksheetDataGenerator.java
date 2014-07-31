@@ -77,6 +77,9 @@ public class ChecksheetDataGenerator {
         if (date.isEmpty()) {
             date = "Pending";
         }
+        if (!prev_value.isEmpty()) {
+            prev_value += " " + uom;
+        }
         Map<String, String> map = new HashMap<String, String>();
         map.put(READING_TITLE, title);
         map.put(READING_ASSET_NUMBER, asset_number);

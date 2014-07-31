@@ -101,13 +101,32 @@
         android:layout_toRightOf="@+id/reading_parent_asset_separator"
         android:layout_alignTop="@+id/reading_parent_asset_number" />
 
+    <!-- Previous Value -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/reading_prev_value_label"
+        android:id="@+id/reading_prev_value_label"
+        android:layout_below="@+id/reading_parent_asset_number"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp" />
+
+    <TextView
+        tools:text="12 mm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reading_prev_value"
+        android:layout_below="@+id/reading_prev_value_label" />
+
+    <!-- Value -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/reading_value_label"
         android:id="@+id/reading_value_label"
-        android:layout_below="@+id/reading_parent_asset_number"
+        android:layout_below="@+id/reading_prev_value"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:paddingTop="12dp" />
@@ -131,6 +150,7 @@
         android:layout_below="@+id/reading_value_label"
         android:numeric="decimal" />
 
+    <!-- Notes -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -138,8 +158,6 @@
         android:text="@string/reading_notes_label"
         android:id="@+id/reading_notes_label"
         android:layout_below="@+id/reading_value"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:paddingTop="12dp" />
 
     <EditText
@@ -148,6 +166,7 @@
         android:id="@+id/reading_notes"
         android:layout_below="@+id/reading_notes_label" />
 
+    <!-- Instructions -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -169,6 +188,7 @@
         tools:text="Hella Echo Park church-key craft beer, irony twee Carles cornhole organic sriracha Bushwick literally readymade. PBRB chambray pour-over, single-origin coffee selvage whatever biodiesel stumptown twee bespoke."
         />
 
+    <!-- Reason for lower reading -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -14,5 +14,6 @@
     <string name="reading_instructions_label">Instructions</string>
     <string name="action_mark_unavailable">Mark Unavailable</string>
     <string name="reading_reason_label">Reason for lower reading</string>
+    <string name="reading_prev_value_label">Previous Value</string>
 
 </resources>
