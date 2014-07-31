@@ -39,6 +39,7 @@ public class ReadingActivity extends FragmentActivity implements IReadingProvide
             String strSequence = intent.getStringExtra(Intent.EXTRA_TEXT);
             try {
                 int sequence = Integer.parseInt(strSequence);
+                mViewPager.setCurrentItem(sequence-1);
             } catch ( NumberFormatException e ) {
                 e.printStackTrace();
             }
