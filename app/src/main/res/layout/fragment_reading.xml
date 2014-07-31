@@ -109,15 +109,16 @@
         android:text="@string/reading_prev_value_label"
         android:id="@+id/reading_prev_value_label"
         android:layout_below="@+id/reading_parent_asset_number"
-        android:paddingTop="12dp"
-        android:paddingBottom="6dp" />
+        android:paddingTop="12dp" />
 
     <TextView
         tools:text="12 mm"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/reading_prev_value"
-        android:layout_below="@+id/reading_prev_value_label" />
+        android:layout_alignBottom="@+id/reading_prev_value_label"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true" />
 
     <!-- Value -->
     <TextView
@@ -130,6 +131,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:paddingTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text="12/12/2014"
+        android:id="@+id/reading_date_entered"
+        android:layout_above="@+id/reading_value"
+        android:layout_alignRight="@+id/reading_prev_value"
+        android:layout_alignEnd="@+id/reading_prev_value" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -148,7 +159,8 @@
         android:id="@+id/reading_value"
         android:layout_toLeftOf="@+id/reading_uom"
         android:layout_below="@+id/reading_value_label"
-        android:numeric="decimal" />
+        android:numeric="decimal"
+        android:singleLine="true" />
 
     <!-- Notes -->
     <TextView

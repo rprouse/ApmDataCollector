@@ -88,6 +88,7 @@ public class ReadingActivity extends Activity {
             SetTextView(R.id.reading_notes, ChecksheetDataGenerator.READING_NOTES);
             SetTextView(R.id.reading_instructions, ChecksheetDataGenerator.READING_INSTRUCTIONS);
             SetTextView(R.id.reading_prev_value, ChecksheetDataGenerator.READING_PREV_VALUE);
+            SetTextView(R.id.reading_date_entered, ChecksheetDataGenerator.READING_DATE_ENTERED);
 
             return mRootView;
         }
